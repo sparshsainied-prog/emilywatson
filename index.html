@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Emily G Watson | The Arualian Archives</title>
+<meta name="description" content="The Arualian Archives, a young adult fantasy series by Emily G Watson: Prophecy's Heirs, Proving Ground and A Problem of Pirates.">
+<meta property="og:title" content="A homepage for Emily G Watson, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Emily G Watson and the Arualian Archives, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/emilywatson/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23232048'/><ellipse cx='16' cy='16' rx='8' ry='11' fill='%23e6c56a' stroke='%23cfcabe' stroke-width='2'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root {
+  --navy: #232048;
+  --maroon: #6b1414;
+  --green: #1f5a2a;
+  --parch: #f0d9a0;
+  --parch-2: #e2c27a;
+  --sand: #cfc6b2;
+  --ink: #262321;
+  --vine: #7f9a5a;
+  --gold: #e6c56a;
+  --red: #c7362b;
+  --sky: #5fb4c8;
+  --display: "Rye", "Rockwell", Georgia, serif;
+  --text: "Alegreya", Georgia, serif;
+  --gutter: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--navy); color: #f4ead2; font-family: var(--text); font-size: 1.12rem; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+p { margin: 0 0 1rem; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.1; }
+h2 { font-size: clamp(2.1rem, 5vw, 3.4rem); margin-bottom: 1.2rem; }
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 var(--gutter); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+/* The cover's plaque: dark label, cream letters, silver double edge */
+.plaque { display: inline-block; font-family: var(--display); font-size: .9rem; letter-spacing: .06em; color: #f4ead2; background: var(--ink); padding: .35rem .8rem .3rem; border: 2px solid var(--sand); box-shadow: 0 0 0 2px var(--ink); margin: 0 0 1rem; }
+.btn { display: inline-block; font-family: var(--display); font-size: 1rem; text-decoration: none; padding: .7rem 1.2rem .6rem; color: var(--ink); background: var(--gold); border: 2px solid var(--ink); box-shadow: 0 0 0 2px var(--sand), 0 0 0 4px var(--ink); border-radius: 3px; }
+.btn:hover, .btn:focus-visible { background: var(--parch); }
+.quiet { font-weight: 700; text-underline-offset: .25em; text-decoration-thickness: 2px; }
+.quiet:hover { color: var(--gold); }
+.row { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; }
+
+.top { position: absolute; z-index: 20; top: 0; left: 0; right: 0; }
+.made { margin: 0; padding: .45rem var(--gutter); background: #14122c; color: var(--sand); font-size: .92rem; line-height: 1.35; text-align: center; }
+.bar { padding: .8rem var(--gutter); }
+.mark { font-family: var(--display); font-size: 1.15rem; text-decoration: none; color: var(--parch); }
+
+/* Nav: the golden key from the bottom of the frame, fixed low right, opens the archive index */
+.key { position: fixed; z-index: 15; right: 1rem; bottom: 1rem; opacity: 0; pointer-events: none; transition: opacity .3s; }
+.key.on { opacity: 1; pointer-events: auto; }
+.key > button { display: flex; align-items: center; gap: .5rem; font: 1rem var(--display); color: var(--ink); background: var(--parch); border: 2px solid var(--ink); box-shadow: 0 0 0 2px var(--sand), 0 0 0 4px var(--ink); border-radius: 2rem; padding: .45rem .9rem .4rem .6rem; cursor: pointer; }
+.key svg { width: 2.6rem; height: 1.2rem; }
+.key ol { position: absolute; right: 0; bottom: calc(100% + .9rem); margin: 0; padding: .6rem 0; list-style: none; min-width: 14rem; background: var(--parch); border: 2px solid var(--ink); box-shadow: 0 0 0 2px var(--sand), 0 0 0 4px var(--ink); display: none; }
+.key.open ol { display: block; }
+.key ol a { display: block; padding: .45rem 1rem; font: 1rem var(--display); color: var(--ink); text-decoration: none; }
+.key ol a:hover, .key ol a:focus-visible { background: var(--parch-2); }
+
+/* Hero: one frame, three volumes. The medallions at the foot of the frame flip like coins, and each flip turns the series to its next volume. */
+.hero { position: relative; height: 100svh; min-height: 40rem; }
+.js .hero { height: 340svh; }
+.stage { position: sticky; top: 0; height: 100svh; min-height: 40rem; overflow: hidden; background: radial-gradient(ellipse 55% 65% at 40% 50%, #34306a, var(--navy) 70%); }
+.slot { position: absolute; left: 38%; top: 52%; height: min(80svh, 50rem); aspect-ratio: 1000 / 1480; transform: translate(-50%, -50%); }
+.cam { position: absolute; inset: 0; transform-origin: 50% 81%; will-change: transform; filter: drop-shadow(0 1.6rem 2.4rem rgba(0, 0, 0, .5)); }
+.cam > img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cam > img + img { opacity: 0; will-change: opacity; }
+.socket, .coin { position: absolute; top: 76%; width: 10.8%; height: 9.73%; }
+.socket { border-radius: 50%; background: #1d1c1a; box-shadow: inset 0 0 0 3px #a9a497; }
+.l { left: 19.6%; } .r { left: 68.8%; }
+.coin { will-change: transform; filter: drop-shadow(0 .3rem .4rem rgba(0, 0, 0, .55)); }
+.coin img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+.coin img.on { opacity: 1; }
+.line { position: absolute; z-index: 3; right: max(var(--gutter), calc(50% - 34rem)); top: 50%; width: min(26rem, 36vw); transform: translateY(-50%); margin: 0; will-change: opacity; }
+.line b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 2.8vw, 2.4rem); line-height: 1.15; color: var(--parch); margin-bottom: .8rem; }
+.line span { font-size: 1.15rem; color: var(--sand); }
+.vol { position: absolute; z-index: 3; right: max(var(--gutter), calc(50% - 34rem)); top: 50%; width: min(26rem, 36vw); transform: translateY(-50%); }
+.vol p { position: absolute; left: 0; right: 0; top: 0; margin: 0; opacity: 0; will-change: opacity; }
+.vol b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(1.9rem, 3vw, 2.6rem); line-height: 1.1; color: var(--parch); margin: .3rem 0 .6rem; }
+.vol small { font-family: var(--display); font-size: .95rem; color: var(--gold); }
+.vol span { display: block; color: var(--sand); }
+.end { position: absolute; z-index: 4; right: max(var(--gutter), calc(50% - 34rem)); top: 50%; width: min(26rem, 36vw); transform: translateY(-50%); opacity: 0; visibility: hidden; will-change: opacity; }
+.end h1 { font-size: clamp(2rem, 3.4vw, 2.9rem); color: var(--parch); margin-bottom: .8rem; }
+
+/* Calm sections */
+.sec { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+.parch { background: var(--parch); color: var(--ink); }
+.parch .quiet:hover { color: var(--red); }
+.cards { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.4rem, 3vw, 2.4rem); }
+.cards li { padding: 1rem 1rem 1.4rem; background: #f8ecc8; border: 2px solid var(--ink); box-shadow: 0 0 0 3px var(--sand), 0 0 0 5px var(--ink); }
+.cards img { margin-bottom: 1rem; }
+.cards h3 { font-size: 1.45rem; margin-bottom: .3rem; }
+.cards .n { font-family: var(--display); font-size: .9rem; color: var(--red); margin-bottom: .6rem; }
+.cards p { font-size: 1.04rem; }
+.cards li:nth-child(1) .n { color: var(--navy); } .cards li:nth-child(2) .n { color: var(--maroon); } .cards li:nth-child(3) .n { color: var(--green); }
+
+.down .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+.down h2 { color: var(--parch); }
+
+.fair { background: var(--maroon); }
+.fair .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem 3rem; align-items: center; }
+.fair .big { font-family: var(--display); font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.12; margin: 0; color: var(--parch); }
+.fair .big span { color: var(--gold); }
+
+.about { background: var(--green); }
+.about .grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 5rem); }
+.about .crafts { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.about .crafts li { font-family: var(--display); font-size: 1rem; padding: .4rem .8rem .3rem; background: var(--parch); color: var(--ink); border: 2px solid var(--ink); border-radius: 3px; }
+.about .say { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.15; color: var(--parch); margin-bottom: 1.4rem; }
+
+.free { text-align: center; }
+.free .wrap { max-width: 42rem; }
+.free .row { justify-content: center; }
+footer { padding: 2.2rem 0 5.5rem; background: #14122c; color: var(--sand); font-size: .98rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: .8rem 2rem; justify-content: space-between; }
+footer p { margin: 0; }
+
+@media (max-width: 820px) {
+  .made { font-size: .84rem; }
+  .slot { left: 50%; top: 42%; height: min(56svh, 31rem); }
+  .line, .vol, .end { left: var(--gutter); right: var(--gutter); top: auto; bottom: 3svh; width: auto; transform: none; }
+  .line { text-align: center; }
+  .line b { font-size: 1.5rem; }
+  .vol { height: 9.5rem; }
+  .vol p { text-align: center; }
+  .vol b { font-size: 1.6rem; }
+  .vol span { font-size: 1rem; }
+  .end { padding: 1rem 1.1rem 1.2rem; background: rgba(35, 32, 72, .95); border: 2px solid var(--sand); }
+  .end h1 { font-size: 1.6rem; }
+  .end p.blurb { display: none; }
+  .cards { grid-template-columns: minmax(0, 1fr); max-width: 22rem; }
+  .down .grid, .about .grid, .fair .wrap { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+<style>:where(img){height:auto}</style>
+</head>
+<body>
+<div class="top" id="top">
+  <p class="made">A homepage idea made by Sparsh Saini for Emily G Watson. Not their official site.</p>
+  <div class="bar"><a class="mark" href="#top">Emily G Watson</a></div>
+</div>
+
+<nav class="key" aria-label="Sections">
+  <ol id="index">
+    <li><a href="#archives">The Arualian Archives</a></li>
+    <li><a href="#down-root">Down Root</a></li>
+    <li><a href="#fair">Tex-Indie</a></li>
+    <li><a href="#about">About Emily</a></li>
+    <li><a href="#free">A free story</a></li>
+  </ol>
+  <button type="button" aria-expanded="false" aria-controls="index"><svg viewBox="0 0 52 24" aria-hidden="true"><g fill="#c9a23a" stroke="#262321" stroke-width="1.6"><circle cx="9" cy="12" r="7"/><rect x="15" y="10" width="30" height="4" rx="1"/><path d="M36 14h4v6h-4zM42 14h3v4h-3z"/></g><circle cx="9" cy="12" r="2.5" fill="#262321"/></svg>Index</button>
+</nav>
+
+<main>
+<section class="hero" aria-label="The Arualian Archives by Emily G Watson">
+  <div class="stage">
+    <div class="slot" aria-hidden="true">
+      <div class="cam">
+        <img src="img/heirs.jpg" alt="" width="1000" height="1480" fetchpriority="high">
+        <img src="img/proving.jpg" alt="" width="1000" height="1480">
+        <img src="img/pirates.jpg" alt="" width="1000" height="1480">
+        <div class="socket l"></div><div class="socket r"></div>
+        <div class="coin l"><img class="on" src="img/heirs-l.png" alt="" width="216" height="288"><img src="img/proving-l.png" alt="" width="216" height="288"><img src="img/pirates-l.png" alt="" width="216" height="288"></div>
+        <div class="coin r"><img class="on" src="img/heirs-r.png" alt="" width="216" height="288"><img src="img/proving-r.png" alt="" width="216" height="288"><img src="img/pirates-r.png" alt="" width="216" height="288"></div>
+      </div>
+    </div>
+    <p class="line"><b>The king of Arualia has been poisoned.</b><span>His children set out after a cure, with an ancient prophecy and an unknown map.</span></p>
+    <div class="vol" aria-hidden="true">
+      <p><small>Volume 1</small><b>Prophecy’s Heirs</b><span>To the edge of the world, and into forgotten history.</span></p>
+      <p><small>Volume 2</small><b>Proving Ground</b><span>Wildfires across Arualia, and Aaron dreams of fire.</span></p>
+      <p><small>Volume 3</small><b>A Problem of Pirates</b><span>A new fleet, the Sunrim Ocean and a legendary smuggler.</span></p>
+    </div>
+    <div class="end">
+      <p class="plaque">Arualian Archives</p>
+      <h1>Three volumes, one frame</h1>
+      <p class="blurb">Young adult fantasy, three volumes so far.</p>
+      <div class="row"><a class="btn" href="https://books2read.com/u/bO09PA">Start with volume 1</a><a class="quiet" href="#archives">All three</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec parch" id="archives">
+  <div class="wrap">
+    <p class="plaque">Arualian Archives</p>
+    <h2>The series</h2>
+    <p>Young adult fantasy about a family of royal children, an old prophecy and a kingdom in danger.</p>
+    <ol class="cards">
+      <li>
+        <img src="img/heirs.jpg" alt="Cover of Prophecy's Heirs: four young travellers before a red canyon and a waterfall under a white castle, in an ornate frame with ravens" width="1000" height="1480" loading="lazy">
+        <p class="n">Volume 1</p><h3>Prophecy’s Heirs</h3>
+        <p>When the king of Arualia is poisoned, his children go looking for a cure, guided by an ancient prophecy and an unknown map, with an enemy close behind.</p>
+        <a class="quiet" href="https://books2read.com/u/bO09PA">Find it in your shop</a>
+      </li>
+      <li>
+        <img src="img/proving.jpg" alt="Cover of Proving Ground: four cloaked travellers facing mountains at dawn" width="1000" height="1480" loading="lazy">
+        <p class="n">Volume 2</p><h3>Proving Ground</h3>
+        <p>A year after Clint Starnor's defeat, wildfires are spreading. A librarian reveals a secret about Aaron's sword, and a fire-wielding witch waits on the mountain.</p>
+        <a class="quiet" href="https://books2read.com/u/3JMwnJ">Find it in your shop</a>
+      </li>
+      <li>
+        <img src="img/pirates.jpg" alt="Cover of A Problem of Pirates: five friends on a beach watching a tall ship" width="1000" height="1480" loading="lazy">
+        <p class="n">Volume 3</p><h3>A Problem of Pirates</h3>
+        <p>The boys hunt pirates across the Sunrim Ocean while Amy and Airdella stay behind, and nobody is sure who can be trusted.</p>
+        <a class="quiet" href="https://books2read.com/u/mvwONj">Find it in your shop</a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec down" id="down-root">
+  <div class="wrap grid">
+    <div>
+      <p class="plaque">Also by Emily</p>
+      <h2>Down Root</h2>
+      <p>Ned joins his foster family and friends for spring break, hoping to forget college for a while. Then his world turns upside down, and he has to race to find a forgotten artifact.</p>
+      <div class="row"><a class="btn" href="https://books2read.com/u/b5jGxl">Get Down Root</a></div>
+    </div>
+    <p style="font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2;color:var(--sand);margin:0">Young adult fantasy, urban fantasy and historical fiction.</p>
+  </div>
+</section>
+
+<section class="sec fair" id="fair">
+  <div class="wrap">
+    <p class="big">Find Emily on the guest list of the <span>Tex-Indie Author Book Fair</span>, Houston.</p>
+    <a class="btn" href="https://sites.google.com/view/tex-indieauthorbookfair/guest-creators">See the guests</a>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap grid">
+    <div>
+      <p class="say">From the deserts of the UAE and the rainforests of Singapore to Sugar Land, Texas.</p>
+      <ul class="crafts"><li>Bookbinding</li><li>Mapmaking</li><li>Sewing</li><li>Hiking</li><li>Camping</li></ul>
+    </div>
+    <div>
+      <h2>Hello, I’m Emily</h2>
+      <p>I grew up in the United Arab Emirates and Singapore before my family settled in Sugar Land, Texas. I studied history at the University of Houston's Honors College.</p>
+      <p>When I'm not writing, I'm a craftaholic: bookbinding, mapmaking, sewing and whatever else I can get my hands on. My friends often find me lost in the woods.</p>
+      <p>I seek to honour Jesus and to pursue His glory wherever it may take me.</p>
+      <div class="row"><a class="quiet" href="https://www.instagram.com/thistleboundbooks/">@thistleboundbooks</a><a class="quiet" href="mailto:thistleboundbooks@yahoo.com">Email me</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec parch free" id="free">
+  <div class="wrap">
+    <p class="plaque">A free short story</p>
+    <h2>The Hanging Tree</h2>
+    <p>Katie's father has been sentenced to hang, and she doesn't know whether to believe he's innocent. Haunted by a past hanging and a secret of her own, she has to decide what to do.</p>
+    <div class="row"><a class="btn" href="https://www.thistleboundbooks.com/_files/ugd/2218c8_49954434b08e42688423eb5086510e48.pdf">Read it free</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>A mockup made by Sparsh Saini for Emily G Watson. Not affiliated, not live. The covers and words are hers.</p>
+    <p><a class="quiet" href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const hero = document.querySelector('.hero');
+  const q = s => hero.querySelector(s), qa = s => [...hero.querySelectorAll(s)];
+  const cam = q('.cam'), covers = qa('.cam > img'), coins = qa('.coin'), vols = qa('.vol p'), line = q('.line'), end = q('.end');
+  const faces = coins.map(c => [...c.querySelectorAll('img')]);
+  const narrow = matchMedia('(max-width: 820px)');
+  const c01 = v => Math.min(1, Math.max(0, v));
+  const ease = t => t * t * (3 - 2 * t);
+  const flips = [.36, .6];  // middle of each flip
+  const state = [0, 0];
+  const draw = p => {
+    // Pull back from the medallions to the whole frame.
+    const z0 = narrow.matches ? 1.9 : 1.4, z = z0 - (z0 - 1) * ease(c01(p / .26));
+    cam.style.transform = `scale(${z.toFixed(4)})`;
+    // Each flip turns the coins over; at edge-on the volume changes underneath.
+    coins.forEach((coin, i) => {
+      const lag = i * .025; let face = 0, sx = 1, lift = 0;
+      flips.forEach((m, k) => {
+        const t = c01((p - (m - .07 + lag)) / .14);
+        if (t >= .5) face = k + 1;
+        if (t > 0 && t < 1) { const a = t * Math.PI; sx = Math.abs(Math.cos(a)); lift = Math.sin(a); }
+      });
+      coin.style.transform = `translateY(${(-40 * lift).toFixed(1)}%) scale(${(Math.max(sx, .02) * (1 + .25 * lift)).toFixed(4)}, ${(1 + .25 * lift).toFixed(4)})`;
+      if (face !== state[i]) { faces[i][state[i]].classList.remove('on'); faces[i][face].classList.add('on'); state[i] = face; }
+    });
+    covers[1].style.opacity = c01((p - (flips[0] - .012)) / .024).toFixed(3);
+    covers[2].style.opacity = c01((p - (flips[1] - .012)) / .024).toFixed(3);
+    // Words: the poisoned king, then each volume, then the series.
+    line.style.opacity = (1 - c01((p - .2) / .08)).toFixed(3);
+    const v = [c01((p - .22) / .06) * (1 - c01((p - (flips[0] - .03)) / .05)), c01((p - (flips[0] + .02)) / .05) * (1 - c01((p - (flips[1] - .03)) / .05)), c01((p - (flips[1] + .02)) / .05) * (1 - c01((p - .78) / .05))];
+    vols.forEach((el, i) => { el.style.opacity = v[i].toFixed(3); });
+    const e = ease(c01((p - .8) / .14));
+    end.style.opacity = e.toFixed(3);
+    end.style.visibility = e > 0 ? 'visible' : 'hidden';
+  };
+  // Key nav
+  const nav = document.querySelector('.key'), btn = nav.querySelector('button');
+  btn.addEventListener('click', () => { const o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
+  nav.querySelectorAll('ol a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
+  let geo = null; const measure = () => { geo = { heroH: hero.offsetHeight, vh: innerHeight }; };
+  let wasOn = null;
+  const navDraw = () => { if (!geo) measure(); const on = scrollY > geo.heroH - geo.vh * .6; if (on !== wasOn) { nav.classList.toggle('on', on); wasOn = on; } };
+  addEventListener('resize', () => { geo = null; });
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.remove('js'); draw(1);
+    addEventListener('scroll', navDraw, { passive: true }); navDraw(); return;
+  }
+  let ticking = false, lastP = -1;
+  const update = () => {
+    ticking = false;
+    if (!geo) measure();
+    const run = geo.heroH - geo.vh, p = run > 0 ? c01(scrollY / run) : 1;
+    if (p !== lastP) { draw(p); lastP = p; }
+    navDraw();
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
+</script>
+</body>
+</html>
